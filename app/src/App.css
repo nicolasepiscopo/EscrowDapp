@@ -1,0 +1,14 @@
+.app {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.app .right {
+  flex: 4;
+}
+
+.app .left {
+  flex: 1;
+}

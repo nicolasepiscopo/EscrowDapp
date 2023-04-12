@@ -1,0 +1,11 @@
+.navbar {
+  padding: 1em;
+  padding-bottom: .2em;
+}
+
+.navbar__logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}

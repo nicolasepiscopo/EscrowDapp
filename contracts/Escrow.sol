@@ -24,4 +24,12 @@ contract Escrow {
 		emit Approved(balance);
 		isApproved = true;
 	}
+
+	function reject() external {
+		require(msg.sender == arbiter);
+		uint balance = address(this).balance;
+		(bool sent, ) = payable(depositor).call{value: balance}("");
+ 		require(sent, "Failed to send Ether");
+		isApproved = false;
+	}
 }

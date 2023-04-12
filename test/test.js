@@ -42,4 +42,14 @@ describe('Escrow', function () {
       expect(after.sub(before)).to.eq(deposit);
     });
   });
+
+  describe('after rejection from the arbiter', () => {
+    it('should transfer balance to depositor', async () => {
+      const before = await ethers.provider.getBalance(depositor.getAddress());
+      const rejectTxn = await contract.connect(arbiter).reject();
+      await rejectTxn.wait();
+      const after = await ethers.provider.getBalance(depositor.getAddress());
+      expect(after.sub(before)).to.eq(deposit);
+    });
+  });
 });

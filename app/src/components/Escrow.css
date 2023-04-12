@@ -1,0 +1,36 @@
+
+.existing-contract ul {
+  padding: 10px;
+  margin: 20px;
+  background-color: #efefef;
+  border-radius: 10px;
+}
+
+.existing-contract ul > li {
+  list-style: none;
+  display: flex;
+  margin: 10px;
+}
+
+.existing-contract ul > li > div {
+  margin: 0 5px;
+}
+
+.existing-contract ul > li > :first-child {
+  font-weight: bold;
+}
+
+.existing-contract .complete {
+  color: #5aa75a;
+  text-align: center;
+}
+
+.existing-contract .approved {
+  color: #5aa75a;
+  padding: 1em;
+}
+
+.existing-contract .rejected {
+  color: #ff0000;
+  padding: 1em;
+}
